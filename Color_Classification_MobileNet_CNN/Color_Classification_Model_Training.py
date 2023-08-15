@@ -25,16 +25,16 @@ IMG_SHAPE = (IMG_SIZE, IMG_SIZE, 3)
 data_path = 'ColorClassification'
 print(os.listdir(data_path))
 
-#os.mkdir('data')
-#
-#for folder in os.listdir(data_path):
-#    if (folder[0].isupper() == True) and len(folder) <=16 :
-#        os.mkdir(f'data/{folder}')
-#        for file in os.listdir(f'{data_path}/{folder}'):
-#            shutil.copy2((f'{data_path}/{folder}/{file}'), (f'data/{folder}'))
-#    
-#    elif folder[0].isupper() != True:
-#        pass
+os.mkdir('data')
+
+for folder in os.listdir(data_path):
+    if (folder[0].isupper() == True) and len(folder) <=16 :
+        os.mkdir(f'data/{folder}')
+        for file in os.listdir(f'{data_path}/{folder}'):
+            shutil.copy2((f'{data_path}/{folder}/{file}'), (f'data/{folder}'))
+    
+    elif folder[0].isupper() != True:
+        pass
 
 
 # Data Preprocessing
